@@ -46,15 +46,15 @@
               backgroundColor:(UIColor *)backgroundColor
                     lineColor:(UIColor *)lineColor
 {
-  const CGFloat padding = size/10;
-  const CGFloat lineSize = size/20;
+  const CGFloat padding = size / 10.f;
+  const CGFloat lineSize = size / 20.f;
   
   UIImage *iNorm = [UIImage closeButton:backgroundColor
                               lineColor:lineColor
                                lineSize:lineSize
                             shadowColor:[UIColor blackColor]
-                           shadowOffset:CGSizeMake(0, padding/3)
-                             shadowBlur:5.f
+                           shadowOffset:CGSizeMake(0, padding / 7.f)
+                             shadowBlur:MIN(padding, 5.f)
                                    size:size
                                 padding:padding
                                   scale:0];
@@ -63,8 +63,8 @@
                               lineColor:lineColor
                                lineSize:lineSize
                             shadowColor:[UIColor blackColor]
-                           shadowOffset:CGSizeMake(1, padding/10)
-                             shadowBlur:5.f
+                           shadowOffset:CGSizeMake(1, padding / 10.f)
+                             shadowBlur:MIN(padding, 5.f)
                                    size:size
                                 padding:padding
                                   scale:0];
